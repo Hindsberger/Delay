@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+
+
+
+<script>
+  var myVideo = document.getElementById("example-video"); 
+
+function playPause() { 
+    if (myVideo.paused) 
+        myVideo.play(); 
+    else 
+        myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+
+ function skip(value) {
+        var video = document.getElementById("video1");
+        video.currentTime += value;
+ }    
+ 
+ function restart() {
+        var video = document.getElementById("video1");
+        video.currentTime = 0;
+    }
+
+ }   
+</script>
+
+
+
+ <button onclick="playPause()">Play/Pause</button>  
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <button onclick="restart();">Restart</button> 
+  <button onclick="skip(-10)">Rewind</button>
+  <button onclick="skip(10)">Fastforward</button>
+<video-js id=example-video width=960 height=540 class="vjs-default-skin" controls data-setup='{ "playbackRates": [0.5, 1, 1.5, 2] }'>
+  <source
+     src="http://192.168.56.107:8000/0XhPqGjDZM/Q9k7SbszyN/s.m3u8"
+     type="application/x-mpegURL">
+</video-js>
+
+<script src="video.js"></script>
+<script src="videojs-http-streaming.js"></script>
+<script>
+var player = videojs('example-video');
+player.play();
+</script>
+
+
+
+
