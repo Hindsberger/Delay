@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Untitled Document</title>
+    <!-- Bootstrap -->
+  <link href="static/css/bootstrap-4.4.1.css" rel="stylesheet">
+	
+  </head>
+  <body>
+ <img src="static/images/Inverted_Colour.png" class="img-fluid" alt="Placeholder image">
+ <div class="container-fluid">
+   <ul id="clothingnav1" class="nav nav-tabs" role="tablist">
+     <li class="nav-item"> <a class="nav-link active" href="#home1" id="hometab1" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Delay</a> </li>
+     <li class="nav-item"> <a class="nav-link" href="#paneTwo1" role="tab" id="hatstab1" data-toggle="tab" aria-controls="hats">Slow-Motion&nbsp;</a> </li>
+     <!-- Dropdown -->
+     <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> Opsæt&nbsp;</a>
+       <div class="dropdown-menu"> <a class="dropdown-item" href="#tabDropDownOne1" role="tab" id="dropdownshoestab1" data-toggle="tab" aria-controls="dropdownShoes">Dropdown Link 1</a> <a class="dropdown-item" href="#tabDropDownTwo1" role="tab" id="dropdownbootstab1" data-toggle="tab" aria-controls="dropdownBoots">Dropdown Link 2</a> </div>
+     </li>
+   </ul>
+   <!-- Content Panel -->
+   <div id="clothingnavcontent1" class="tab-content">
+     <div role="tabpanel" class="tab-pane fade show active" id="home1" aria-labelledby="hometab1">
+		 <p class="vertical-center">Indstil forsinkelse her</p>
+	   <div class="vertical-center">
+		<form action="/10sec" method="post" id="form1"></form>
+		<form action="/15sec" method="post" id="form2"></form>
+		<form action="/20sec" method="post" id="form3"></form>
+		<form action="/25sec" method="post" id="form4"></form> 
+		<button type="submit" name="minimum"  class="btn" form="form1">10 sek</button>
+		<button type="submit" name="minimum"  class="btn" form="form2">15 sek</button>
+		<button type="submit" name="minimum"  class="btn" form="form3">20 sek</button>
+		<button type="submit" name="minimum"  class="btn" form="form4">25 sek</button>
+		  
+	       
+		   
+	   </div>
+		 <br> </br>
+	   <div class="vertical-center"> 
+	     <button type="button" class="btn">Live / Reset</button>
+	   </div>
+		 
+	   <form class="vertical-center" action="http://localhost:5000/post" method="post">
+		   <div class="form-group">
+	     <label for="CustomTime">Sæt din egen tid</label>
+		     <input type="text" id="firstname" name="DelayTime" class="form-control"  placeholder="eks. 25">
+		   <button type="submit" class="btn">Sæt</button>
+			    </div>
+	   </form>
+		   
+	  
+     </div>
+     <div role="tabpanel" class="tab-pane fade" id="paneTwo1" aria-labelledby="hatstab1">
+		 <p>Indstil Slowmotion</p>
+	   <div class="btn-group" role="group">
+		   <button type="button" class="btn btn-secondary">10 sek</button>
+		   <button type="button" class="btn btn-secondary">15 sek</button>
+		   <button type="button" class="btn btn-secondary">20 sek</button>
+	   </div>
+       
+     </div>
+     <div role="tabpanel" class="tab-pane fade" id="tabDropDownOne1" aria-labelledby="dropdownshoestab1">
+       <p>Dropdown content#1</p>
+     </div>
+     <div role="tabpanel" class="tab-pane fade" id="tabDropDownTwo1" aria-labelledby="dropdownbootstab1">
+       <p>Dropdown content#2</p>
+     </div>
+   </div>
+ </div>
+ <script src="static/js/jquery-3.4.1.min.js"></script>
+  <script src="static/js/popper.min.js"></script>
+  <script src="static/js/bootstrap-4.4.1.js"></script>
+  </body>
+</html>
