@@ -103,7 +103,7 @@ def medium():
     print("Start VLC")
     
 def ButtonFeedback():
-    if y = 
+    #if y = 
     GPIO.output(output_pins[0],True)
     GPIO.output(output_pins[1],False)
     GPIO.output(output_pins[2],False)

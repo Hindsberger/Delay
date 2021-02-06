@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import threading 
 import time
 import sys
-import tcp
+#import tcp
 import buttons
 
 app = Flask(__name__)
